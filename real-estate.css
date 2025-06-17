@@ -28,3 +28,35 @@ body{
   align-items: center;
   
 }
+
+li{
+  list-style-type: none;
+}
+
+a{
+  text-decoration: none;
+}
+
+.sub-menu{
+  display: none;
+  border: 1px solid gray;
+  border-radius: 5px;
+  padding: 10px;
+  width: 100%;
+  max-width: 50rem;
+}
+
+#dropdown:hover .sub-menu{
+  display: block;
+}
+
+header{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+ul{
+  display: flex;
+  column-gap: 1.5rem;
+}
