@@ -38,16 +38,27 @@ a{
 }
 
 .sub-menu{
+  position: absolute;
+  top: 100%;
+  left: 50%;
   display: none;
   border: 1px solid gray;
   border-radius: 5px;
   padding: 10px;
   width: 100%;
   max-width: 50rem;
+  z-index: 1;
+  background-color: var(--white);
+  width: max-content;
+  transform: translateX(-50%);
 }
 
 #dropdown:hover .sub-menu{
   display: block;
+}
+
+#dropdown{
+  position: relative;
 }
 
 header{
