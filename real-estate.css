@@ -19,14 +19,30 @@ body{
 .logo-image{
   width: 3.5rem;
 }
+
+.logo-text{
+  /* 1. Put the gradient “behind” the glyphs */
+   background-image: linear-gradient(135deg,#005FCC 0%,#0074E8 50%,#1C8BFF 100%);
+
+  /* 2. Clip that background to the text shapes */
+  -webkit-background-clip:text;   /* Chrome / Edge / Safari */
+  background-clip:text;           /* Firefox (needs v115+) */
+
+  /* 3. Make the glyphs themselves transparent so the bg shows through */
+  -webkit-text-fill-color:transparent; /* Chrome / Edge / Safari */
+  color:transparent;                     /* Fallback */
+
+  /* Optional fine‑tuning */
+  font-weight: 1000;        /* looks crisper with thicker fonts */
+  display:inline-block;   /* ensures the gradient stays bound to the span */
+}
+
 .logo-link{
   text-decoration: none;
-  color: black;
   font-weight: bold;
   font-size: 2rem;
   display: flex;
   align-items: center;
-  
 }
 
 li{
@@ -92,4 +108,72 @@ ul{
   background: white;
   z-index: 10;
   box-shadow: 2px 3px 12px 1px var(--gray-200);
+}
+
+.search-box-form .input-location-icon{
+  position: absolute;
+  left: 1rem;
+  font-size: 1.8rem;
+  color: var(--blue-300);
+}
+
+.icon-input-container{
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-search-input{
+  width: 100%;
+  height: 100%;
+  padding: 1rem 1.5rem 1rem 3.5rem;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  font-size: 1.6rem;
+  background: transparent;
+  color: var(--gray-300);
+}
+
+.hero-search-input::placeholder{
+  font-size: 1.4rem;
+  font-weight: 400;
+  columns: var(--gray-300);
+}
+
+.hero-btn-container{
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.hero-search-btn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 75%;
+  width: 15rem;
+  background: var(--blue-300);
+  color: white;
+  padding: 0 2rem;
+  font-size: 1.6rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+
+
+
+
+
+
+
+
+
+@supports not (background-clip:text){
+  .logo-blue{ color:#0074E8; }
 }
