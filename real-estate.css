@@ -160,11 +160,11 @@ ul{
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 75%;
+  height: 60%;
   width: 15rem;
   background: var(--blue-300);
   color: white;
-  padding: 0 2rem;
+  padding: 0 5px;
   font-size: 1.6rem;
   border: none;
   border-radius: 5px;
@@ -173,22 +173,52 @@ ul{
 }
 
 .hero-section{
-  justify-content: center;
-  background-color: var(--blue-soft);
+  height: 100vh;
+  display: flex;
   width: 100%;
+  justify-content: center;
+  align-items: center;
+
+  background-image: url('assets/house\ image.avif');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
 }
 .hero-section-container{
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: vh;
-  min-height: 60rem;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
+.hero-contents{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: auto;
+  width: 80%;
+  z-index: 3;
+  text-align: center;
+}
 
-
-
+.hero-decription, .hero-header-text{
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+  margin: 0;
+}
+.hero-decription{
+  margin-bottom: 5px;
+  font-style: italic;
+}
+.hero-header-text{
+  margin-bottom: 1rem;
+  font-size: 3.5rem;
+  word-spacing: 0.8rem;
+}
 
 
 
