@@ -86,7 +86,14 @@ a{
 header{
   display: flex;
   justify-content: space-around;
-  align-items: center;  
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: var(--white);
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 1rem 0;
 }
 
 ul{
@@ -165,6 +172,19 @@ ul{
   transition: var(--transition);
 }
 
+.hero-section{
+  justify-content: center;
+  background-color: var(--blue-soft);
+  width: 100%;
+}
+.hero-section-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: vh;
+  min-height: 60rem;
+}
 
 
 
