@@ -101,6 +101,19 @@ ul{
   column-gap: 1.5rem;
 }
 
+.nav-links{
+  color: black;
+  font-size: 1.8rem;
+}
+
+.nav-btn{
+  background-color: var(--blue-300);
+  color: white;
+  padding: 10px 25px;
+  border-radius: 5px;
+  font-size: 1.7rem;
+}
+
 .search-box-form{
   display: flex;
   justify-content: space-around;
