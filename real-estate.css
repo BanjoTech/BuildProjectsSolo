@@ -63,7 +63,7 @@ a{
   top: 100%;
   left: 50%;
   display: none;
-  border: 1px solid gray;
+  border: 1px solid #ccc;
   border-radius: 5px;
   padding: 10px;
   width: 100%;
