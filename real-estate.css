@@ -235,20 +235,23 @@ ul{
 
 .property-image{
   width: 100%;
-  height: 25rem;
+  height: 30rem;
   object-fit: cover;
 }
 
 .search-by-location-section{
-  
+  padding: 10rem;
 }
 
 .searched-property-container{
-  
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: center;
+  margin: auto;
 }
 
 .searched-properties{
-  width: 25rem;
+  width: 30rem;
 }
 
 
