@@ -234,7 +234,21 @@ ul{
 }
 
 .property-image{
-  width: 30rem;
+  width: 100%;
+  height: 25rem;
+  object-fit: cover;
+}
+
+.search-by-location-section{
+  
+}
+
+.searched-property-container{
+  
+}
+
+.searched-properties{
+  width: 25rem;
 }
 
 
