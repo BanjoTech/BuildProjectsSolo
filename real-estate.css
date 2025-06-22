@@ -235,12 +235,40 @@ ul{
 
 .property-image{
   width: 100%;
-  height: 30rem;
+  height: 20rem;
   object-fit: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  margin-bottom: 1.5rem;
+}
+
+.property-type{
+  margin-bottom: 1.5rem;
+  margin-left: 1.5rem;
+  /* color: rgb(64, 255, 47); */
+  color: var(--blue-300);
+  font-weight: 500;
 }
 
 .search-by-location-section{
-  padding: 10rem;
+  padding-left: 10rem;
+  padding-right: 10rem;
+  padding-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+.property-price{
+  margin-bottom: 1.5rem;
+  margin-left: 1.5rem;
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: var(--gray-200);
+}
+
+.property-location{
+  margin-bottom: 1.5rem;
+  margin-left: 1.5rem;
+  color: black;
 }
 
 .searched-property-container{
@@ -248,10 +276,16 @@ ul{
   grid-template-columns: 1fr 1fr 1fr;
   justify-content: center;
   margin: auto;
+  border-radius: 10px;
+  row-gap: 5rem;
 }
 
 .searched-properties{
   width: 30rem;
+  box-shadow: 2px 3px 12px 1px #ccc;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-radius: 10px;
 }
 
 
