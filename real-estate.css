@@ -299,7 +299,7 @@ ul{
   flex-wrap: nowrap; /* Prevent wrapping to a new line */
   overflow-x: auto; /* Enable horizontal scrolling */
   justify-content: flex-start; /* Align items to the start of the container */
-  gap: 3rem; /* Maintain the same column gap as before */
+  gap: 2.5rem; /* Maintain the same column gap as before */
   padding-bottom: 1.5rem; /* Add some padding for the scrollbar, if visible */
   border-radius: 10px;
 }
