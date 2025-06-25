@@ -313,6 +313,57 @@ ul{
   border-radius: 10px;
 }
 
+/* Styling for the new scrollable widget */
+.listed-properties-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem; /* Space between title/arrows and content */
+  width: 100%; /* Match the content container width */
+  margin-left: 0;
+  padding: 0 1rem; /* Adjust padding to align with content if needed */
+  font-size: 3rem; /* Larger font for the title */
+  font-weight: bold;
+  color: var(--text-head-color);
+}
+
+.navigation-arrows {
+  display: flex;
+  gap: 1rem;
+}
+
+.arrow-btn {
+  background-color: var(--blue-300);
+  color: var(--white);
+  border: none;
+  border-radius: 50%; /* Make them round */
+  width: 4rem; /* Size of the button */
+  height: 4rem; /* Size of the button */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem; /* Size of the arrow character */
+  cursor: pointer;
+  transition: background-color var(--transition), transform var(--transition);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  outline: none; /* Remove outline on focus */
+}
+
+.arrow-btn:hover {
+  background-color: var(--blue-400);
+  transform: translateY(-2px); /* Slight lift effect */
+}
+
+.arrow-btn:active {
+  transform: translateY(0); /* Reset on click */
+}
+
+.arrow-btn:disabled {
+  background-color: var(--general-gray); /* Gray out when disabled */
+  cursor: not-allowed;
+  opacity: 0.6;
+  box-shadow: none;
+}
 
 
 
