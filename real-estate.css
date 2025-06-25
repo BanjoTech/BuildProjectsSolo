@@ -294,26 +294,7 @@ ul{
   padding-left: 5rem;
 }
 
-.listed-property-widget-container{
-  display: flex; /* Changed to flexbox */
-  flex-wrap: nowrap; /* Prevent wrapping to a new line */
-  overflow-x: auto; /* Enable horizontal scrolling */
-  justify-content: flex-start; /* Align items to the start of the container */
-  gap: 2.5rem; /* Maintain the same column gap as before */
-  padding-bottom: 1.5rem; /* Add some padding for the scrollbar, if visible */
-  border-radius: 10px;
-}
 
-.latest-properties{
-  flex-shrink: 0;
-  width: 30rem;
-  box-shadow: 2px 3px 12px 1px #ccc;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  border-radius: 10px;
-}
-
-/* Styling for the new scrollable widget */
 .listed-properties-header {
   display: flex;
   justify-content: space-between;
@@ -364,6 +345,40 @@ ul{
   opacity: 0.6;
   box-shadow: none;
 }
+
+.listed-property-widget-wrapper {
+  position: relative; /* Essential for positioning arrows inside relative to this wrapper */
+  width: 80%; /* Match the desired width of the visible section */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.listed-property-widget-container{
+  display: flex; /* Changed to flexbox */
+  flex-wrap: nowrap; /* Prevent wrapping to a new line */
+  overflow-x: auto; /* Enable horizontal scrolling */
+  scroll-behavior: smooth; /* Smooth scrolling when arrows are clicked */
+  justify-content: flex-start; /* Align items to the start of the container */
+  gap: 3rem; /* Maintain the same column gap as before */
+  padding-bottom: 1.5rem; /* Add some padding for the scrollbar, if visible */
+  /* Hide scrollbar for a cleaner look, but still allow scrolling with arrows/mouse */
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.listed-property-widget-container::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera*/
+}
+
+.latest-properties{
+  flex-shrink: 0; /* Prevent items from shrinking */
+  width: 30rem;
+  box-shadow: 2px 3px 12px 1px #ccc;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-radius: 10px;
+}
+
 
 
 
