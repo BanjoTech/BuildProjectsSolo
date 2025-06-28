@@ -391,7 +391,8 @@ ul{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .service-column-container{
