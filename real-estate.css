@@ -382,8 +382,38 @@ ul{
 .services-header{
   display: flex;
   flex-direction: column;
+  align-items: center;
+}
+
+.services-section{
+  width: 80%;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: auto;
+}
+
+.service-column-container{
+  display: flex;
+  flex-direction: column;
+  width: 30rem;
+  height: 10rem;
+  flex-wrap: wrap;
+}
+
+.service-row-container{
+  display: flex;
+}
+
+.services-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: center;
+  margin: auto;
+  row-gap: 2rem;
+  column-gap: 2rem;
+  vertical-align: middle;
 }
 
 
