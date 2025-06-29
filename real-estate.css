@@ -485,7 +485,7 @@ ul{
 .service-column-container-reason{
   display: flex;
   flex-direction: column;
-  width: 30rem;
+  width: 25rem;
   row-gap: 1.5rem;
   border-right: 1px solid var(--text-head-color);
   padding-left: 5px;
