@@ -419,6 +419,7 @@ ul{
   margin: auto;
   row-gap: 3rem;
   column-gap: 2rem;
+  width: 100%;
 }
 
 .header-top{
