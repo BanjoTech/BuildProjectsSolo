@@ -512,7 +512,8 @@ ul{
 }
 
 .subscribe-btn{
-  background-color: var(--blue-400);
+  /* background-image: linear-gradient(135deg, #005FCC 0%, #0074E8 50%, #1C8BFF 100%); */
+  background-color: var(--blue-300);
 }
 
 .map-section{
