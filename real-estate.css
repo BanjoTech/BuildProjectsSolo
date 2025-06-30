@@ -497,6 +497,40 @@ ul{
   border-right: none;
 }
 
+.subscribe-details{
+  margin-bottom: 2rem;
+}
+
+.subscribe-form{
+  width: 40%;
+  max-width: 70rem;
+  height: 7rem;
+}
+
+.subscribe-top{
+  margin-bottom: 1rem;
+}
+
+.subscribe-btn{
+  background-color: var(--blue-400);
+}
+
+.map-section{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 5rem;
+}
+
+.subscribe-section{
+  margin-bottom: 5rem;
+}
+
+
+
+
+
 
 
 
