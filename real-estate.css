@@ -324,6 +324,11 @@ ul{
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   border-radius: 10px;
+  transition: all 0.3s;
+}
+
+.searched-properties:hover{
+  transform: scale(1.1, 1.1);
 }
 
 .listed-properties-section{
@@ -442,6 +447,11 @@ ul{
   /* height: 10rem; */
   flex-wrap: wrap;
   row-gap: 1rem;
+  transition: all 0.3s;
+}
+
+.service-column-container:hover{
+  transform: scale(1.1, 1.1);
 }
 
 .service-row-container{
