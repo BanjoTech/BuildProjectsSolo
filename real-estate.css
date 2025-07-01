@@ -105,6 +105,32 @@ ul{
 .nav-links{
   color: black;
   font-size: 1.8rem;
+  position: relative; /* Essential for positioning the pseudo-element */
+  padding-bottom: 5px; /* Add some padding to make space for the line */
+}
+
+.nav-links::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0; /* Initially no width */
+  height: 2px; /* Thickness of the line */
+  background-color: var(--blue-300); /* Blue color for the line */
+  transition: width 0.3s ease-in-out; /* Smooth transition for the width change */
+}
+
+.nav-links:hover::after {
+  width: 100%; /* Expand to full width on hover */
+}
+
+/* Specific adjustments for the "More Services" link to avoid the line under the arrow */
+#dropdown .nav-links::after {
+  width: 0; /* Ensure no line under "More Services" itself */
+}
+
+#dropdown:hover .nav-links::after {
+  width: 0; /* Still no line under "More Services" on hover */
 }
 
 .nav-btn{
@@ -113,6 +139,11 @@ ul{
   padding: 10px 25px;
   border-radius: 5px;
   font-size: 1.7rem;
+  transition: background-color 0.3s ease; /* Add transition for background-color */
+}
+
+.nav-btn:hover {
+  background-color: var(--blue-400); /* Change background color on hover */
 }
 
 .search-box-form{
@@ -183,7 +214,11 @@ ul{
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  transition: var(--transition);
+  transition: background-color 0.3s ease; /* Add transition for background-color */
+}
+
+.hero-search-btn:hover{
+  background-color: var(--blue-400); /* Change background color on hover */
 }
 
 .hero-section{
