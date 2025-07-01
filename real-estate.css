@@ -528,6 +528,31 @@ ul{
   margin-bottom: 5rem;
 }
 
+.footer-container{
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-top{
+  display: flex;
+}
+
+.footer-second-row{
+  display: flex;
+}
+
+.footer-columns{
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-copyright{
+  display: flex;
+}
+
+.copy-right-end{
+  display: flex;
+}
 
 
 
