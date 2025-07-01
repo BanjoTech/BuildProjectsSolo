@@ -222,7 +222,7 @@ ul{
 }
 
 .hero-section{
-  height: 60rem;
+  height: 100vh;
   display: flex;
   width: 100%;
   justify-content: center;
