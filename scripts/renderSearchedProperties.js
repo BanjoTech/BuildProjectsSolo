@@ -8,7 +8,7 @@ export function renderSearchedProperties(filteredProperties = properties) {
     // If no filtered properties (e.g., no match found), display a message
     if (filteredProperties.length === 0) {
         searchedPropertiesHTML = `
-            <p class="no-results-message">No properties found for this location. Please try a different search term.</p>
+            <p class="no-results-message">⚠️No properties found for this location. Please try a different search term.</p>
         `;
     } else {
         filteredProperties.forEach((property) => {

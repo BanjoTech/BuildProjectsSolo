@@ -652,6 +652,10 @@ footer{
   font-weight: bold;
 }
 
+.no-results-message{
+  font-size: 3rem;
+}
+
 @keyframes appear{
   from{
     opacity: 0;
