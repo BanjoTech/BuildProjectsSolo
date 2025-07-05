@@ -271,6 +271,7 @@
         width: 80%;
         max-width: 45rem;
         height: 6rem;
+        margin-bottom: 3rem;
     }
 
     .map-section iframe {
