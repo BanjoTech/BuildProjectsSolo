@@ -1,0 +1,439 @@
+/* media-queries.css */
+
+/* General adjustments for smaller screens (e.g., larger tablets and small laptops) */
+@media (max-width: 1200px) {
+    body {
+        font-size: 1.5rem;
+    }
+
+    header {
+        padding: 1rem 2rem;
+        justify-content: space-between; /* Adjust for better spacing */
+    }
+
+    .logo-link {
+        font-size: 1.8rem;
+    }
+
+    .logo-text {
+        font-size: 2.8rem;
+    }
+
+    .nav-links, .nav-btn {
+        font-size: 1.6rem;
+        padding: 8px 20px;
+    }
+
+    .sub-menu {
+        max-width: 40rem;
+    }
+
+    .hero-header-text {
+        font-size: 3rem;
+    }
+
+    .search-box-form {
+        width: 80%;
+        height: 7rem;
+    }
+
+    .hero-search-btn {
+        width: 12rem;
+        font-size: 1.5rem;
+    }
+
+    .search-by-location-section,
+    .listed-properties-section,
+    .services-section {
+        padding-left: 5rem;
+        padding-right: 5rem;
+        width: 90%; /* Adjust overall section width */
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .searched-property-container {
+        width: 100%; /* Make it fill the adjusted section width */
+        grid-template-columns: repeat(2, 1fr); /* Two columns for larger tablets */
+        column-gap: 2rem;
+        row-gap: 3rem;
+    }
+
+    .searched-properties, .latest-properties {
+        width: auto; /* Let grid handle width */
+        max-width: 100%;
+    }
+
+    .listed-property-widget-wrapper {
+        width: 100%;
+    }
+
+    .listed-properties-header {
+        font-size: 3rem;
+    }
+
+    .arrow-btn {
+        width: 3.5rem;
+        height: 3.5rem;
+        font-size: 1.8rem;
+    }
+
+    .services-container {
+        grid-template-columns: repeat(2, 1fr); /* Two columns for services */
+        column-gap: 2rem;
+        row-gap: 3rem;
+    }
+
+    .service-column-container {
+        width: auto; /* Let grid handle width */
+    }
+
+    .services-container-reason {
+        grid-template-columns: repeat(2, 1fr); /* Two columns for reasons */
+        column-gap: 1.5rem;
+        row-gap: 2rem;
+    }
+
+    .service-column-container-reason {
+        width: auto; /* Let grid handle width */
+        padding-right: 10px;
+    }
+
+    .subscribe-form {
+        width: 60%;
+    }
+
+    .map-section iframe {
+        width: 90%;
+        height: 400px;
+    }
+
+    .footer-top > div,
+    .footer-columns,
+    .copy-right-end {
+        width: auto; /* Allow content to dictate width */
+    }
+
+    .footer-second-row {
+        flex-wrap: wrap; /* Allow columns to wrap */
+        justify-content: space-around;
+        row-gap: 3rem;
+    }
+}
+
+
+/* Tablet view (e.g., 768px and below) */
+@media (max-width: 768px) {
+    body {
+        font-size: 1.4rem;
+    }
+
+    header {
+        flex-direction: row-reverse; /* Move logo-nav to the right */
+        justify-content: flex-end; /* Push content to the right */
+        padding: 1rem 2rem;
+    }
+
+    .left-nav {
+        display: none; /* Hide the navigation links */
+    }
+
+    .logo-nav {
+        margin-right: 2rem; /* Add some margin to the right of the logo */
+    }
+
+    .hero-decription {
+        font-size: 1.8rem;
+    }
+
+    .hero-header-text {
+        font-size: 2.8rem;
+        word-spacing: 0.5rem;
+    }
+
+    .search-box-form {
+        flex-direction: column; /* Stack input and button vertically */
+        height: auto; /* Auto height to accommodate stacked elements */
+        padding: 1.5rem;
+        width: 90%;
+        max-width: 50rem; /* Limit max width for better appearance */
+    }
+
+    .icon-input-container {
+        width: 100%;
+        margin-bottom: 1rem; /* Space between input and button */
+        height: 6rem; /* Ensure input has enough height */
+    }
+
+    .hero-search-input {
+        height: 100%;
+        padding: 1rem 1.5rem 1rem 4rem; /* Adjust padding for icon */
+    }
+
+    .search-box-form .input-location-icon {
+        font-size: 2rem;
+        left: 1.5rem; /* Adjust icon position */
+    }
+
+    .hero-btn-container {
+        width: 100%;
+        height: auto;
+    }
+
+    .hero-search-btn {
+        width: 100%; /* Make button full width */
+        height: 5rem; /* Set a fixed height for the button */
+        font-size: 1.7rem;
+    }
+
+    .search-by-location-section,
+    .listed-properties-section,
+    .services-section {
+        padding-left: 2rem;
+        padding-right: 2rem;
+        width: 95%; /* Increase width for more space */
+    }
+
+    .searched-property-container {
+        grid-template-columns: repeat(2, 1fr); /* Still two columns */
+        column-gap: 1.5rem;
+        row-gap: 2.5rem;
+    }
+
+    .searched-properties, .latest-properties {
+        width: auto; /* Let grid handle width */
+        max-width: 100%;
+        margin: 0 auto; /* Center items if they don't fill the grid cell */
+    }
+
+    .listed-properties-header {
+        flex-direction: column; /* Stack header elements */
+        align-items: center;
+        text-align: center;
+        font-size: 2.8rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .navigation-arrows {
+        margin-top: 1.5rem; /* Space between title and arrows */
+    }
+
+    .header-top {
+        font-size: 2.8rem;
+    }
+
+    .header-details {
+        font-size: 1.8rem;
+    }
+
+    .services-container {
+        grid-template-columns: 1fr; /* Single column for services */
+        row-gap: 2rem;
+    }
+
+    .service-column-container {
+        width: 100%;
+        align-items: center; /* Center content in single column */
+        text-align: center;
+    }
+
+    .service-row-container {
+        justify-content: center; /* Center icon and title */
+    }
+
+    .services-container-reason {
+        grid-template-columns: 1fr; /* Single column for reasons */
+        row-gap: 2rem;
+    }
+
+    .service-column-container-reason {
+        width: 100%;
+        border-right: none; /* Remove right border */
+        border-bottom: 1px solid var(--text-head-color); /* Add bottom border */
+        padding-bottom: 2rem;
+        text-align: center;
+        align-items: center;
+    }
+
+    .service-column-container-reason:last-child {
+        border-bottom: none; /* No bottom border for the last one */
+    }
+
+    .subscribe-top {
+        font-size: 2.8rem;
+    }
+
+    .subscribe-details {
+        font-size: 1.8rem;
+    }
+
+    .subscribe-form {
+        width: 80%;
+        max-width: 45rem;
+        height: 6rem;
+    }
+
+    .map-section iframe {
+        width: 100%;
+        height: 300px; /* Reduce height for mobile */
+    }
+
+    footer {
+        padding: 2rem 1.5rem;
+    }
+
+    .footer-top {
+        flex-direction: column;
+        align-items: center;
+        row-gap: 1.5rem;
+        font-size: 2rem;
+    }
+
+    .footer-second-row {
+        flex-direction: column;
+        align-items: center;
+        row-gap: 2rem;
+    }
+
+    .footer-columns {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .copy-right-end {
+        flex-direction: column;
+        align-items: center;
+        row-gap: 0.5rem;
+        width: 100%;
+    }
+
+    .footer-copyright {
+        flex-direction: column;
+        align-items: center;
+        row-gap: 1rem;
+        text-align: center;
+    }
+}
+
+/* Mobile view (e.g., 480px and below) */
+@media (max-width: 480px) {
+    body {
+        font-size: 1.3rem;
+    }
+
+    header {
+        padding: 1rem 1.5rem;
+    }
+
+    .logo-link {
+        font-size: 1.6rem;
+    }
+
+    .logo-image {
+        width: 3rem;
+    }
+
+    .logo-text {
+        font-size: 2.5rem;
+    }
+
+    .hero-decription {
+        font-size: 1.6rem;
+    }
+
+    .hero-header-text {
+        font-size: 2.2rem;
+        word-spacing: 0.3rem;
+    }
+
+    .search-box-form {
+        width: 95%;
+        padding: 1rem;
+    }
+
+    .hero-search-input {
+        font-size: 1.4rem;
+        padding: 1rem 1rem 1rem 3.5rem;
+    }
+
+    .search-box-form .input-location-icon {
+        font-size: 1.8rem;
+        left: 1rem;
+    }
+
+    .hero-search-btn {
+        height: 4.5rem;
+        font-size: 1.5rem;
+    }
+
+    .search-by-location-section,
+    .listed-properties-section,
+    .services-section {
+        padding-left: 1rem;
+        padding-right: 1rem;
+        width: 100%;
+    }
+
+    .searched-property-container {
+        grid-template-columns: 1fr; /* Single column for mobile */
+        row-gap: 2rem;
+        column-gap: 0; /* No column gap for single column */
+    }
+
+    .searched-properties {
+        width: 90%; /* Adjust width for single column */
+        margin: 0 auto; /* Center the property cards */
+    }
+
+    .listed-properties-header {
+        font-size: 2.2rem;
+    }
+
+    .arrow-btn {
+        width: 3rem;
+        height: 3rem;
+        font-size: 1.6rem;
+    }
+
+    .header-top {
+        font-size: 2.2rem;
+    }
+
+    .header-details {
+        font-size: 1.6rem;
+    }
+
+    .service-row-container {
+        font-size: 2rem;
+    }
+
+    .service-2nd-row {
+        font-size: 1.8rem;
+    }
+
+    .subscribe-top {
+        font-size: 2.2rem;
+    }
+
+    .subscribe-details {
+        font-size: 1.6rem;
+    }
+
+    .subscribe-form {
+        width: 95%;
+        height: 5.5rem;
+    }
+
+    .map-section iframe {
+        height: 250px;
+    }
+
+    .footer-top > div,
+    .footer-columns > a,
+    .footer-columns > .the-text,
+    .footer-copyright > div,
+    .copy-right-end > a {
+        font-size: 1.4rem;
+    }
+}
