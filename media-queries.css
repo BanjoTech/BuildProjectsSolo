@@ -121,9 +121,26 @@
     }
 }
 
+@media (max-width: 993px) {
+    header {
+        padding: 1rem 2rem;
+    }
 
-/* Tablet view (e.g., 768px and below) */
-@media (max-width: 768px) {
+    .nav-btn{
+        padding: 6px 18px;
+    }
+    
+    .nav-links{
+        font-size: 1.5rem;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    
+}
+
+
+/* Tablet view (e.g., 804px and below) supposed to be 768px actually but...*/
+@media (max-width: 804px) {
     body {
         font-size: 1.4rem;
     }

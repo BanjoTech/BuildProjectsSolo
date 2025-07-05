@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Details - OralRealtor</title>
+    <link rel="stylesheet" href="real-estate.css">
+    <link rel="stylesheet" href="media-queries.css">
+    <link rel="stylesheet" href="properties-details.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" xintegrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="logo-nav">
+            <a href="index.html" class="logo-link">
+                <img src="assets/logo-image.png" loading="lazy" alt="OralRealtor Logo" class="logo-image">
+                <span class="logo-text">OralRealtor</span>
+            </a>
+        </nav>
+        <!-- The left-nav will be hidden by media queries on this page as well if needed -->
+        <nav class="left-nav">
+            <ul class="drop-properties">
+                <li>
+                    <a class="nav-links" href="real-estate.html">Back to Home</a>
+                </li>
+                <li>
+                    <a class="nav-btn" href="#">LOGIN</a>
+                </li>
+                <li>
+                    <a class="nav-btn" href="#">SIGN UP</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="property-details-main">
+        <section class="property-hero-section">
+            <div class="property-image-container">
+                <!-- Property image will be loaded here by JavaScript -->
+                <img src="https://placehold.co/1000x600/cccccc/333333?text=Loading+Image..." alt="Property Image" class="main-property-image">
+            </div>
+            <div class="property-info-card">
+                <h1 class="property-detail-type">Loading Property Type...</h1>
+                <p class="property-detail-price">Loading Price...</p>
+                <p class="property-detail-location">Loading Location...</p>
+                <div class="property-description">
+                    <p>This exquisite property offers unparalleled comfort and modern amenities. Located in a serene environment, it's perfect for families or individuals seeking a peaceful yet accessible home. Features include spacious rooms, state-of-the-art kitchen, and a beautiful garden.</p>
+                    <p>Experience luxury living with easy access to major roads, schools, and shopping centers. Don't miss out on this incredible opportunity!</p>
+                </div>
+                <button class="call-to-action-btn">Book Inspection</button>
+            </div>
+        </section>
+
+        <section class="property-video-section">
+            <h2 class="section-title">Virtual Tour</h2>
+            <div class="video-container">
+                <!-- GIF will be loaded here by JavaScript -->
+                <img src="https://media.tenor.com/W2d53_f-fI4AAAAC/homes-and-land-virtual-tour-property.gif" alt="Property Virtual Tour" class="property-video" autoplay loop muted>
+            </div>
+        </section>
+
+        <section class="related-properties-section">
+            <h2 class="section-title">Related Properties</h2>
+            <div class="related-properties-container listed-property-widget-container">
+                <!-- Related properties will be dynamically loaded here by JavaScript -->
+                <!-- Example placeholder -->
+                <a href="#" class="latest-properties">
+                    <img loading="lazy" class="property-image" src="https://placehold.co/300x180/cccccc/333333?text=Related+Property" alt="">
+                    <div class="property-type">Related Property Type</div>
+                    <div class="property-price">₦0,000,000</div>
+                    <div class="property-location">Related Property Location</div>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-top">
+                <div>Services</div>
+                <div>Discover</div>
+                <div>Company</div>
+                <div>Connect</div>
+            </div>
+
+            <div class="footer-second-row">
+                <div class="footer-columns">
+                    <a href="">House Management</a>
+                    <a href="">Property Investment</a>
+                    <a href="">Estate Management</a>
+                    <a href="">Property Management</a>
+                    <a href="">Property Development</a>
+                    <a href="">Property Consultancy</a>
+                </div>
+
+                <div class="footer-columns">
+                    <a href="">3 Bedroom Duplex</a>
+                    <a href="">5 Bedroom Flat</a>
+                    <a href="">Fully Detached Duplex</a>
+                    <a href="">Bungalow</a>
+                    <a href="">Semi Fully Detached</a>
+                </div>
+
+                <div class="footer-columns">
+                    <a href="">About Us</a>
+                    <a href="">Contact</a>
+                    <a href="">Blog</a>
+                    <a href="">Newsletter</a>
+                    <a href="">Featured</a>
+                </div>
+
+                <div class="footer-columns">
+                    <div class="the-text">No 22A, Anuoluwapo estate Road B, Elewe-eran Abeokuta, Ogun State Nigeria.</div>
+                    <div class="the-text">+234 808 637 5482</div>
+                    <div class="social-contacts">
+                        <a href=""><i class="fa-brands fa-facebook"></i></a>
+                        <a href=""><i class="fa-brands fa-instagram"></i></a>
+                        <a href=""><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href=""><i class="fa-brands fa-youtube"></i></a>
+                        <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-copyright">
+                <div> &#169; 2025 OralRealtor</div>
+
+                <div class="copy-right-end">
+                    <a href="">Sitemap</a>
+                    <a href="">Privacy Notice</a>
+                    <a href="">Terms & Conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script type="module" src="scripts/properties-details.js"></script>
+</body>
+</html>
