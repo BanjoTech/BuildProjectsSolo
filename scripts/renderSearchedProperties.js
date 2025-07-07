@@ -1,6 +1,5 @@
 // scripts/renderSearchedProperties.js
 
-
 import { properties, formatNaira } from '../data/properties.js'; // Adjust path if needed
 
 export function renderSearchedProperties(filteredProperties = properties) {
@@ -14,8 +13,8 @@ export function renderSearchedProperties(filteredProperties = properties) {
     } else {
         filteredProperties.forEach((property) => {
             searchedPropertiesHTML += `
-                <a href="#" class="searched-properties">
-                    <img loading="lazy" class="property-image" src="${property.image}" alt="">
+                <a href="property-details.html?id=${property.id}" class="searched-properties" data-property-id="${property.id}">
+                    <img loading="lazy" class="property-image" src="${property.image}" alt="${property.type}">
                     <div class="property-type">${property.type}</div>
                     <div class="property-price">${formatNaira(property.priceCents)}</div>
                     <div class="property-location">${property.location}</div>

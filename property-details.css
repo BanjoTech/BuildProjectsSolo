@@ -1,0 +1,251 @@
+/* property-details.css */
+
+.property-details-main {
+    padding-top: 10rem; /* Space for fixed header */
+    padding-bottom: 5rem;
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+.property-hero-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    padding: 2rem;
+    margin-bottom: 5rem;
+}
+
+.property-image-container {
+    width: 100%;
+    max-width: 100rem;
+    border-radius: var(--border-radius-10);
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.main-property-image {
+    width: 100%;
+    height: 50rem; /* Fixed height for consistency */
+    object-fit: cover;
+    display: block;
+}
+
+.property-info-card {
+    background-color: var(--white);
+    padding: 3rem;
+    border-radius: var(--border-radius-10);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 70rem; /* Limit width for readability */
+    text-align: center;
+}
+
+.property-detail-type {
+    font-size: 3.2rem;
+    color: var(--blue-300);
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.property-detail-price {
+    font-size: 2.8rem;
+    color: var(--text-head-color);
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.property-detail-location {
+    font-size: 1.8rem;
+    color: var(--general-gray);
+    margin-bottom: 2rem;
+}
+
+.property-description {
+    font-size: 1.8rem;
+    color: var(--gray-300);
+    line-height: 1.6;
+    margin-bottom: 3rem;
+    text-align: left;
+}
+
+.call-to-action-btn {
+    background-color: var(--blue-300);
+    color: var(--white);
+    padding: 1.5rem 3rem;
+    border: none;
+    border-radius: var(--border-radius-5);
+    font-size: 2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.call-to-action-btn:hover {
+    background-color: var(--blue-400);
+}
+
+.property-video-section {
+    padding: 2rem;
+    margin-bottom: 5rem;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 3.5rem;
+    color: var(--text-head-color);
+    margin-bottom: 3rem;
+    font-weight: bold;
+}
+
+.video-container {
+    width: 100%;
+    max-width: 90rem;
+    margin: 0 auto;
+    border-radius: var(--border-radius-10);
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.property-video {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+    object-fit: cover;
+}
+
+.related-properties-section {
+    padding: 2rem;
+    margin-bottom: 5rem;
+    text-align: center;
+}
+
+.related-properties-container {
+    display: flex; /* Use flexbox for horizontal scrolling */
+    flex-wrap: nowrap; /* Prevent wrapping */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    scroll-behavior: smooth;
+    gap: 3rem; /* Spacing between items */
+    padding-bottom: 1.5rem; /* Space for scrollbar */
+    justify-content: flex-start; /* Align items to the start */
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.related-properties-container::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
+
+/* Ensure individual property cards in related section are styled correctly */
+.related-properties-container .latest-properties {
+    flex-shrink: 0; /* Prevent shrinking */
+    width: 30rem; /* Fixed width for consistency */
+    box-shadow: 2px 3px 12px 1px #ccc;
+    border-radius: 10px;
+    transition: all 0.3s;
+}
+
+.related-properties-container .latest-properties:hover {
+    transform: scale(1.05, 1.05); /* Slightly smaller hover effect */
+}
+
+/* Media Queries for property-details.css */
+@media (max-width: 1024px) {
+    .main-property-image {
+        height: 40rem;
+    }
+    .property-info-card {
+        padding: 2.5rem;
+    }
+    .property-detail-type {
+        font-size: 2.8rem;
+    }
+    .property-detail-price {
+        font-size: 2.4rem;
+    }
+    .property-detail-location,
+    .property-description {
+        font-size: 1.6rem;
+    }
+    .call-to-action-btn {
+        padding: 1.2rem 2.5rem;
+        font-size: 1.8rem;
+    }
+    .section-title {
+        font-size: 3rem;
+    }
+    .video-container {
+        max-width: 80rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .property-details-main {
+        padding-top: 8rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+    .main-property-image {
+        height: 30rem;
+    }
+    .property-info-card {
+        padding: 2rem;
+    }
+    .property-detail-type {
+        font-size: 2.4rem;
+    }
+    .property-detail-price {
+        font-size: 2rem;
+    }
+    .property-detail-location,
+    .property-description {
+        font-size: 1.5rem;
+    }
+    .call-to-action-btn {
+        padding: 1rem 2rem;
+        font-size: 1.6rem;
+    }
+    .section-title {
+        font-size: 2.5rem;
+    }
+    .video-container {
+        max-width: 100%;
+    }
+    .related-properties-container .latest-properties {
+        width: 28rem; /* Slightly smaller cards on tablet */
+    }
+}
+
+@media (max-width: 480px) {
+    .property-details-main {
+        padding-top: 7rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    .main-property-image {
+        height: 22rem;
+    }
+    .property-info-card {
+        padding: 1.5rem;
+    }
+    .property-detail-type {
+        font-size: 2rem;
+    }
+    .property-detail-price {
+        font-size: 1.8rem;
+    }
+    .property-detail-location,
+    .property-description {
+        font-size: 1.4rem;
+    }
+    .call-to-action-btn {
+        padding: 0.8rem 1.5rem;
+        font-size: 1.4rem;
+    }
+    .section-title {
+        font-size: 2rem;
+    }
+    .related-properties-container .latest-properties {
+        width: 25rem; /* Even smaller cards on mobile */
+    }
+}
