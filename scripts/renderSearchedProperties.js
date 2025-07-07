@@ -1,5 +1,7 @@
 // scripts/renderSearchedProperties.js
 
+
+
 import { properties, formatNaira } from '../data/properties.js'; // Adjust path if needed
 
 export function renderSearchedProperties(filteredProperties = properties) {
@@ -28,3 +30,4 @@ export function renderSearchedProperties(filteredProperties = properties) {
     // Show the section once content is rendered
     document.querySelector('.searched-property-container').classList.remove('hidden-section');
 }
+

@@ -73,6 +73,9 @@ document.addEventListener('DOMContentLoaded', () => {
 // real-estate.js
 
 import { properties } from './data/properties.js';
+
+
+
 import { renderSearchedProperties } from './scripts/renderSearchedProperties.js';
 
 
@@ -170,3 +173,4 @@ document.addEventListener('DOMContentLoaded', () => {
     // If you want to show all properties initially, uncomment the line below:
     // renderSearchedProperties(properties);
 });
+
