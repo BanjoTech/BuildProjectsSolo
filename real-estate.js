@@ -75,7 +75,6 @@ document.addEventListener('DOMContentLoaded', () => {
 import { properties } from './data/properties.js';
 
 
-
 import { renderSearchedProperties } from './scripts/renderSearchedProperties.js';
 
 
