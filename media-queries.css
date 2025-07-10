@@ -145,18 +145,25 @@
         font-size: 1.4rem;
     }
 
-    header {
-        flex-direction: row-reverse; /* Move logo-nav to the right */
-        justify-content: flex-end; /* Push content to the right */
+     header {
+        /* Remove or adjust flex-direction: row-reverse; and justify-content: flex-end;
+           as the hamburger menu will now manage the right side. */
+        flex-direction: row; /* Reset to default */
+        justify-content: space-between; /* Space out logo and hamburger */
         padding: 1rem 2rem;
     }
 
     .left-nav {
-        display: none; /* Hide the navigation links */
+        display: none; /* Hide the desktop navigation links */
     }
 
+     .hamburger-menu {
+        display: block; /* Show the hamburger menu icon */
+    }
+
+    /* Remove .logo-nav margin-right as it's no longer needed with space-between */
     .logo-nav {
-        margin-right: 2rem; /* Add some margin to the right of the logo */
+        margin-right: 0;
     }
 
     .hero-decription {

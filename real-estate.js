@@ -3,6 +3,72 @@
 import { properties } from './data/properties.js';
 import { renderSearchedProperties } from './scripts/renderSearchedProperties.js';
 
+
+document.addEventListener('DOMContentLoaded', () => {
+    // --- Hamburger Menu Functionality ---
+    const hamburgerIcon = document.querySelector('.hamburger-icon');
+    const closeMobileNavBtn = document.querySelector('.close-mobile-nav');
+    const mobileNavOverlay = document.querySelector('.mobile-nav-overlay');
+    const mobileNav = document.querySelector('.mobile-nav');
+    const mobileDropdown = document.getElementById('mobile-dropdown');
+    const mobileSubMenu = document.querySelector('.mobile-sub-menu');
+
+    // Function to open the mobile menu
+    const openMobileMenu = () => {
+        mobileNavOverlay.classList.add('active');
+        mobileNav.classList.add('active');
+        document.body.style.overflow = 'hidden'; // Prevent scrolling body when menu is open
+    };
+
+    // Function to close the mobile menu
+    const closeMobileMenu = () => {
+        mobileNavOverlay.classList.remove('active');
+        mobileNav.classList.remove('active');
+        document.body.style.overflow = ''; // Restore body scrolling
+        // Optionally close mobile dropdown when menu closes
+        mobileDropdown.classList.remove('active');
+        mobileSubMenu.classList.remove('active');
+    };
+
+    // Event listener for opening hamburger menu
+    if (hamburgerIcon) {
+        hamburgerIcon.addEventListener('click', openMobileMenu);
+    }
+
+    // Event listener for closing mobile menu via close button
+    if (closeMobileNavBtn) {
+        closeMobileNavBtn.addEventListener('click', closeMobileMenu);
+    }
+
+    // Event listener for closing mobile menu when clicking overlay
+    if (mobileNavOverlay) {
+        mobileNavOverlay.addEventListener('click', (event) => {
+            // Close only if the click is directly on the overlay, not on the mobile-nav itself
+            if (event.target === mobileNavOverlay) {
+                closeMobileMenu();
+            }
+        });
+    }
+
+    // Event listener for mobile dropdown toggle
+    if (mobileDropdown) {
+        mobileDropdown.addEventListener('click', (event) => {
+            // Prevent the parent link from navigating
+            event.preventDefault();
+            // Toggle the 'active' class on both dropdown and sub-menu
+            mobileDropdown.classList.toggle('active');
+            mobileSubMenu.classList.toggle('active');
+        });
+    }
+
+    // --- End of Hamburger Menu Functionality ---
+
+    // ... rest of your existing DOMContentLoaded code ...
+});
+
+
+
+
 document.addEventListener('DOMContentLoaded', () => {
     // --- Existing code for Latest Listed Properties ---
     const listedPropertyContainer = document.querySelector('.listed-property-widget-container');
