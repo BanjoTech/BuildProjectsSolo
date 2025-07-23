@@ -806,6 +806,10 @@ footer{
   font-size: 3rem;
 }
 
+.display-none {
+    display: none !important; /* Use !important if necessary to override other display properties */
+}
+
 @keyframes appear{
   from{
     opacity: 0;

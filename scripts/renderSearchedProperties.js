@@ -25,7 +25,9 @@ export function renderSearchedProperties(filteredProperties = properties) {
 
     document.querySelector('.searched-property-container').innerHTML = searchedPropertiesHTML;
 
+    document.querySelector('.searched-property-container').classList.add('display-none');
+
     // Show the section once content is rendered
-    document.querySelector('.searched-property-container').classList.remove('hidden-section');
+    document.querySelector('.searched-property-container').classList.remove('display-none');
 }
 
