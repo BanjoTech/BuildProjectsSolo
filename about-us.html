@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - OralRealtor</title>
+    <link rel="stylesheet" href="real-estate.css">
+    <link rel="stylesheet" href="media-queries.css">
+    <link rel="stylesheet" href="about-us.css"> <!-- New CSS for About Us page -->
+
+    <!-- Corrected Font Awesome CDN link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" xintegrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="logo-nav">
+            <a href="index.html" class="logo-link">
+                <img src="assets/logo-image.png" loading="lazy" alt="OralRealtor Logo" class="logo-image">
+                <span class="logo-text">OralRealtor</span>
+            </a>
+        </nav>
+        <nav class="left-nav">
+            <ul class="drop-properties">
+                <li>
+                    <a class="nav-links" href="index.html">Check Properties</a>
+                </li>
+                <li id="dropdown">
+                    <a class="nav-links" href="#">More Services &#x25BE;</a>
+                    <div class="sub-menu">
+                        <a class="nav-links" href="">House Management</a><hr>
+                        <a class="nav-links" href="">Property Investment</a><hr>
+                        <a class="nav-links" href="">Estate Management</a><hr>
+                        <a class="nav-links" href="">Property Management</a><hr>
+                        <a class="nav-links" href="">Property Development</a><hr>
+                        <a class="nav-links" href="">Property Consultancy</a>
+                    </div>
+                </li>
+                <li>
+                    <a class="nav-links" href="about-us.html">About Us</a>
+                </li>
+                <li>
+                    <a class="nav-links" href="contact-us.html">Contact Us</a>
+                </li>
+                <li>
+                    <a class="nav-btn" href="#">LOGIN</a>
+                </li>
+                <li>
+                    <a class="nav-btn" href="#">SIGN UP</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="hamburger-menu">
+            <button class="hamburger-icon" aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <div class="mobile-nav-overlay">
+                <nav class="mobile-nav">
+                    <button class="close-mobile-nav" aria-label="Close navigation">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                    <ul class="mobile-nav-links">
+                        <li><a class="nav-links" href="index.html">Home</a></li>
+                        <li class="mobile-dropdown" id="mobile-dropdown">
+                            <a class="nav-links drop-properties" href="#">
+                                Properties
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </a>
+                            <ul class="mobile-sub-menu">
+                                <li><a href="#">3 Bedroom Duplex</a></li>
+                                <li><a href="#">5 Bedroom Flat</a></li>
+                                <li><a href="#">Bungalow</a></li>
+                                <li><a href="#">Fully Detached Duplex</a></li>
+                                <li><a href="#">Semi-Detached</a></li>
+                                <li><a href="#">Lands</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="nav-links" href="#">Services</a></li>
+                        <li><a class="nav-links" href="about-us.html">About Us</a></li>
+                        <li><a class="nav-links" href="contact-us.html">Contact</a></li>
+                        <li><a class="nav-btn" href="#">LOGIN</a></li>
+                        <li><a class="nav-btn" href="#">SIGN UP</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="about-us-main">
+        <section class="about-hero-section">
+            <div class="about-hero-content">
+                <h1 class="about-title">Your Trusted Partner in Real Estate</h1>
+                <p class="about-description">At OralRealtor, we believe in transforming dreams into addresses. With years of experience in the Nigerian real estate market, we are dedicated to providing unparalleled service, expert guidance, and a seamless experience for all your property needs.</p>
+            </div>
+        </section>
+
+        <section class="our-mission-vision">
+            <div class="section-header">
+                <h2 class="header-top">Our Mission & Vision</h2>
+                <p class="header-details">Guiding you to your perfect property with integrity and expertise.</p>
+            </div>
+            <div class="mission-vision-container">
+                <div class="mission-card">
+                    <i class="fa-solid fa-bullseye icon-large"></i>
+                    <h3>Our Mission</h3>
+                    <p>To empower our clients with informed decisions by providing comprehensive, transparent, and personalized real estate solutions, ensuring their comfort and satisfaction.</p>
+                </div>
+                <div class="vision-card">
+                    <i class="fa-solid fa-eye icon-large"></i>
+                    <h3>Our Vision</h3>
+                    <p>To be the leading and most trusted real estate agency in Nigeria, renowned for our commitment to excellence, innovation, and community development.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-section-one">
+            <div class="about-content-block">
+                <div class="about-image-wrapper">
+                    <img src="assets/my-about-image.jpg" alt="OralRealtor Team" class="about-circular-image">
+                </div>
+                <div class="about-text-content">
+                    <h2 class="about-heading">Who We Are</h2>
+                    <p>OralRealtor is more than just a real estate agency; we are a team of passionate professionals committed to redefining your property journey. Founded on principles of trust, transparency, and client-centricity, we specialize in a wide range of services including property sales, rentals, investment advisory, and comprehensive property management.</p>
+                    <p>Our deep understanding of the local market, combined with a global perspective, allows us to offer unique insights and opportunities to both individual and corporate clients. We pride ourselves on our ethical practices and our ability to consistently exceed expectations.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="team-section">
+            <div class="section-header">
+                <h2 class="header-top">Meet Our Team</h2>
+                <p class="header-details">Dedicated professionals ready to assist you.</p>
+            </div>
+            <div class="team-members-container">
+                <div class="team-member-card">
+                    <img src="assets/my-about-image.jpg" alt="Team Member 1" class="team-member-image">
+                    <h3>Banjo Oluwasegun</h3>
+                    <p>CEO & Founder</p>
+                </div>
+                <div class="team-member-card">
+                    <img src="assets/testimonial-4.jpg" alt="Team Member 2" class="team-member-image">
+                    <h3>Eniola Bankole</h3>
+                    <p>Lead Sales Agent</p>
+                </div>
+                <div class="team-member-card">
+                    <img src="assets/testimonial-3.jpg" alt="Team Member 3" class="team-member-image">
+                    <h3>Alex Johnson</h3>
+                    <p>Property Manager</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-top">
+                <div>Services</div>
+                <div>Discover</div>
+                <div>Company</div>
+                <div>Connect</div>
+            </div>
+
+            <div class="footer-second-row">
+                <div class="footer-columns">
+                    <a href="">House Management</a>
+                    <a href="">Property Investment</a>
+                    <a href="">Estate Management</a>
+                    <a href="">Property Management</a>
+                    <a href="">Property Development</a>
+                    <a href="">Property Consultancy</a>
+                </div>
+
+                <div class="footer-columns">
+                    <a href="">3 Bedroom Duplex</a>
+                    <a href="">5 Bedroom Flat</a>
+                    <a href="">Fully Detached Duplex</a>
+                    <a href="">Bungalow</a>
+                    <a href="">Semi Fully Detached</a>
+                    <a href="">Lands</a>
+                </div>
+
+                <div class="footer-columns">
+                    <a href="about-us.html">About Us</a>
+                    <a href="contact-us.html">Contact</a>
+                    <a href="">Blog</a>
+                    <a href="">Newsletter</a>
+                    <a href="">Featured</a>
+                </div>
+
+                <div class="footer-columns">
+                    <div class="the-text">No 22A, Anuoluwapo estate Road B, Elewe-eran Abeokuta, Ogun State Nigeria.</div>
+                    <div class="the-text">+234 808 637 5482</div>
+                    <div class="social-contacts">
+                        <a href=""><i class="fa-brands fa-facebook"></i></a>
+                        <a href=""><i class="fa-brands fa-instagram"></i></a>
+                        <a href=""><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href=""><i class="fa-brands fa-youtube"></i></a>
+                        <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-copyright">
+                <div> &#169; 2025 OralRealtor</div>
+
+                <div class="copy-right-end">
+                    <a href="">Sitemap</a>
+                    <a href="">Privacy Notice</a>
+                    <a href="">Terms & Conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- You might want to include real-estate.js for mobile menu functionality -->
+    <script type="module" src="real-estate.js"></script>
+</body>
+</html>

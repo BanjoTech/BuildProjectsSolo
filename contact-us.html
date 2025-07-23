@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - OralRealtor</title>
+    <link rel="stylesheet" href="real-estate.css">
+    <link rel="stylesheet" href="media-queries.css">
+    <link rel="stylesheet" href="contact-us.css"> <!-- New CSS for Contact Us page -->
+
+    <!-- Corrected Font Awesome CDN link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" xintegrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="logo-nav">
+            <a href="index.html" class="logo-link">
+                <img src="assets/logo-image.png" loading="lazy" alt="OralRealtor Logo" class="logo-image">
+                <span class="logo-text">OralRealtor</span>
+            </a>
+        </nav>
+        <nav class="left-nav">
+            <ul class="drop-properties">
+                <li>
+                    <a class="nav-links" href="index.html">Check Properties</a>
+                </li>
+                <li id="dropdown">
+                    <a class="nav-links" href="#">More Services &#x25BE;</a>
+                    <div class="sub-menu">
+                        <a class="nav-links" href="">House Management</a><hr>
+                        <a class="nav-links" href="">Property Investment</a><hr>
+                        <a class="nav-links" href="">Estate Management</a><hr>
+                        <a class="nav-links" href="">Property Management</a><hr>
+                        <a class="nav-links" href="">Property Development</a><hr>
+                        <a class="nav-links" href="">Property Consultancy</a>
+                    </div>
+                </li>
+                <li>
+                    <a class="nav-links" href="about-us.html">About Us</a>
+                </li>
+                <li>
+                    <a class="nav-links" href="contact-us.html">Contact Us</a>
+                </li>
+                <li>
+                    <a class="nav-btn" href="#">LOGIN</a>
+                </li>
+                <li>
+                    <a class="nav-btn" href="#">SIGN UP</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="hamburger-menu">
+            <button class="hamburger-icon" aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <div class="mobile-nav-overlay">
+                <nav class="mobile-nav">
+                    <button class="close-mobile-nav" aria-label="Close navigation">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                    <ul class="mobile-nav-links">
+                        <li><a class="nav-links" href="index.html">Home</a></li>
+                        <li class="mobile-dropdown" id="mobile-dropdown">
+                            <a class="nav-links drop-properties" href="#">
+                                Properties
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </a>
+                            <ul class="mobile-sub-menu">
+                                <li><a href="#">3 Bedroom Duplex</a></li>
+                                <li><a href="#">5 Bedroom Flat</a></li>
+                                <li><a href="#">Bungalow</a></li>
+                                <li><a href="#">Fully Detached Duplex</a></li>
+                                <li><a href="#">Semi-Detached</a></li>
+                                <li><a href="#">Lands</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="nav-links" href="#">Services</a></li>
+                        <li><a class="nav-links" href="about-us.html">About Us</a></li>
+                        <li><a class="nav-links" href="contact-us.html">Contact</a></li>
+                        <li><a class="nav-btn" href="#">LOGIN</a></li>
+                        <li><a class="nav-btn" href="#">SIGN UP</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="contact-us-main">
+        <section class="contact-hero-section">
+            <div class="contact-hero-content">
+                <h1 class="contact-title">Get In Touch With Us</h1>
+                <p class="contact-description">Have questions or need assistance? Reach out to OralRealtor today. Our team is ready to help you with all your real estate inquiries.</p>
+            </div>
+        </section>
+
+        <section class="contact-form-section">
+            <div class="section-header">
+                <h2 class="header-top">Send Us a Message</h2>
+                <p class="header-details">Fill out the form below and we'll get back to you as soon as possible.</p>
+            </div>
+            <form class="contact-form">
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Your Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" placeholder="Subject of your inquiry" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Your Message</label>
+                    <textarea id="message" name="message" rows="6" placeholder="Type your message here..." required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </section>
+
+        <section class="contact-info-section">
+            <div class="section-header">
+                <h2 class="header-top">Our Contact Information</h2>
+                <p class="header-details">Find us and connect with us directly.</p>
+            </div>
+            <div class="contact-info-container">
+                <div class="info-card">
+                    <i class="fa-solid fa-location-dot icon-info"></i>
+                    <h3>Address</h3>
+                    <p>No 22A, Anuoluwapo estate Road B, Elewe-eran Abeokuta, Ogun State Nigeria.</p>
+                </div>
+                <div class="info-card">
+                    <i class="fa-solid fa-phone icon-info"></i>
+                    <h3>Phone</h3>
+                    <p>+234 808 637 5482</p>
+                    <p>+234 701 234 5678</p>
+                </div>
+                <div class="info-card">
+                    <i class="fa-solid fa-envelope icon-info"></i>
+                    <h3>Email</h3>
+                    <p>info@oralrealtor.com</p>
+                    <p>support@oralrealtor.com</p>
+                </div>
+                <div class="info-card">
+                    <i class="fa-solid fa-clock icon-info"></i>
+                    <h3>Business Hours</h3>
+                    <p>Mon - Fri: 9:00 AM - 5:00 PM</p>
+                    <p>Sat: 10:00 AM - 2:00 PM</p>
+                    <p>Sun: Closed</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-map-section">
+            <div class="section-header">
+                <h2 class="header-top">Locate Us</h2>
+                <p class="header-details">Visit our office or see our coverage area.</p>
+            </div>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d253682.45932653378!2d3.1438714678340696!3d6.548376810548728!2m3!1fo!2fo!3fo!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8b2ae68280c1%3A0xdc9e87a367c3d9cb!2sLagos!5e0!3m2!1sen!2sng!4v1666196146301!5m2!1sen!2sng" width="800" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-top">
+                <div>Services</div>
+                <div>Discover</div>
+                <div>Company</div>
+                <div>Connect</div>
+            </div>
+
+            <div class="footer-second-row">
+                <div class="footer-columns">
+                    <a href="">House Management</a>
+                    <a href="">Property Investment</a>
+                    <a href="">Estate Management</a>
+                    <a href="">Property Management</a>
+                    <a href="">Property Development</a>
+                    <a href="">Property Consultancy</a>
+                </div>
+
+                <div class="footer-columns">
+                    <a href="">3 Bedroom Duplex</a>
+                    <a href="">5 Bedroom Flat</a>
+                    <a href="">Fully Detached Duplex</a>
+                    <a href="">Bungalow</a>
+                    <a href="">Semi Fully Detached</a>
+                    <a href="">Lands</a>
+                </div>
+
+                <div class="footer-columns">
+                    <a href="about-us.html">About Us</a>
+                    <a href="contact-us.html">Contact</a>
+                    <a href="">Blog</a>
+                    <a href="">Newsletter</a>
+                    <a href="">Featured</a>
+                </div>
+
+                <div class="footer-columns">
+                    <div class="the-text">No 22A, Anuoluwapo estate Road B, Elewe-eran Abeokuta, Ogun State Nigeria.</div>
+                    <div class="the-text">+234 808 637 5482</div>
+                    <div class="social-contacts">
+                        <a href=""><i class="fa-brands fa-facebook"></i></a>
+                        <a href=""><i class="fa-brands fa-instagram"></i></a>
+                        <a href=""><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href=""><i class="fa-brands fa-youtube"></i></a>
+                        <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-copyright">
+                <div> &#169; 2025 OralRealtor</div>
+
+                <div class="copy-right-end">
+                    <a href="">Sitemap</a>
+                    <a href="">Privacy Notice</a>
+                    <a href="">Terms & Conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- You might want to include real-estate.js for mobile menu functionality -->
+    <script type="module" src="real-estate.js"></script>
+</body>
+</html>

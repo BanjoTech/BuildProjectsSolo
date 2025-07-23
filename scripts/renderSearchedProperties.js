@@ -25,9 +25,10 @@ export function renderSearchedProperties(filteredProperties = properties) {
 
     document.querySelector('.searched-property-container').innerHTML = searchedPropertiesHTML;
 
+    //When you want to truly hide the search container (e.g., empty search term, or no results):
     document.querySelector('.searched-property-container').classList.add('display-none');
 
-    // Show the section once content is rendered
+    // Show the section once content is rendered, When you want to show it (with results):
     document.querySelector('.searched-property-container').classList.remove('display-none');
 }
 
