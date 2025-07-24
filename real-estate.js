@@ -142,7 +142,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         } else {
             document.querySelector('.searched-property-container').innerHTML = '';
-            document.querySelector('.searched-property-container').classList.add('hidden-section'); // Hide if empty
+            document.querySelector('.searched-property-container').classList.add('display-none'); // Hide if empty
             // Using console.log instead of alert for better user experience
             console.log('Please enter a location or keyword to search!');
         }
