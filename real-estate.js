@@ -124,10 +124,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const searchButton = document.querySelector('.hero-search-btn');
     const searchedPropertySection = document.querySelector('.search-by-location-section');
 
+
     searchButton.addEventListener('click', (event) => {
         event.preventDefault(); // Prevent the form from submitting and reloading the page
 
         const searchTerm = searchInput.value.toLowerCase().trim(); // Get input and normalize it
+
 
         if (searchTerm) {
             const filteredProperties = properties.filter(property =>
