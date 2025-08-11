@@ -5,6 +5,56 @@ import { renderSearchedProperties } from './scripts/renderSearchedProperties.js'
 
 
 document.addEventListener('DOMContentLoaded', () => {
+    // --- NEW: Check for and render saved search results on page load ---
+    const savedResults = localStorage.getItem('searchResults');
+    const savedSearchTerm = localStorage.getItem('searchTerm');
+
+    const searchedPropertySection = document.querySelector('.search-by-location-section');
+    const listedPropertySection = document.querySelector('.listed-properties-section');
+    const searchInput = document.querySelector('.hero-search-input');
+
+    if (savedResults && savedSearchTerm) {
+        // Parse the JSON string back into an array
+        const filteredProperties = JSON.parse(savedResults);
+        
+        // Render the saved results
+        renderSearchedProperties(filteredProperties);
+        
+        // Populate the search input with the saved term
+        searchInput.value = savedSearchTerm;
+        
+        // Show the searched properties section and hide the listed properties
+        searchedPropertySection.classList.remove('hidden-section');
+        listedPropertySection.classList.add('hidden-section');
+
+    } else {
+        // If no saved results, make sure the default listed properties are visible
+        searchedPropertySection.classList.add('hidden-section');
+        listedPropertySection.classList.remove('hidden-section');
+    }
+
+    // --- NEW: Add event listener to home links to clear local storage ---
+    // Select both the mobile nav home link and the logo link
+    const homeLinks = document.querySelectorAll('a[href="index.html"], .logo-link');
+
+    homeLinks.forEach(link => {
+        link.addEventListener('click', (event) => {
+            // Check if the link is a non-mobile link for the logo
+            if (link.classList.contains('logo-link')) {
+                // For the logo link, we can prevent default and then navigate after clearing.
+                event.preventDefault();
+                localStorage.removeItem('searchResults');
+                localStorage.removeItem('searchTerm');
+                // Navigate to the index page
+                window.location.href = 'index.html';
+            } else {
+                // For other home links, just clear storage before the navigation occurs
+                localStorage.removeItem('searchResults');
+                localStorage.removeItem('searchTerm');
+            }
+        });
+    });
+
     // --- Hamburger Menu Functionality ---
     const hamburgerIcon = document.querySelector('.hamburger-icon');
     const closeMobileNavBtn = document.querySelector('.close-mobile-nav');
@@ -13,49 +63,39 @@ document.addEventListener('DOMContentLoaded', () => {
     const mobileDropdown = document.getElementById('mobile-dropdown');
     const mobileSubMenu = document.querySelector('.mobile-sub-menu');
 
-    // Function to open the mobile menu
     const openMobileMenu = () => {
         mobileNavOverlay.classList.add('active');
         mobileNav.classList.add('active');
-        document.body.style.overflow = 'hidden'; // Prevent scrolling body when menu is open
+        document.body.style.overflow = 'hidden'; 
     };
 
-    // Function to close the mobile menu
     const closeMobileMenu = () => {
         mobileNavOverlay.classList.remove('active');
         mobileNav.classList.remove('active');
-        document.body.style.overflow = ''; // Restore body scrolling
-        // Optionally close mobile dropdown when menu closes
+        document.body.style.overflow = ''; 
         mobileDropdown.classList.remove('active');
         mobileSubMenu.classList.remove('active');
     };
 
-    // Event listener for opening hamburger menu
     if (hamburgerIcon) {
         hamburgerIcon.addEventListener('click', openMobileMenu);
     }
 
-    // Event listener for closing mobile menu via close button
     if (closeMobileNavBtn) {
         closeMobileNavBtn.addEventListener('click', closeMobileMenu);
     }
 
-    // Event listener for closing mobile menu when clicking overlay
     if (mobileNavOverlay) {
         mobileNavOverlay.addEventListener('click', (event) => {
-            // Close only if the click is directly on the overlay, not on the mobile-nav itself
             if (event.target === mobileNavOverlay) {
                 closeMobileMenu();
             }
         });
     }
 
-    // Event listener for mobile dropdown toggle
     if (mobileDropdown) {
         mobileDropdown.addEventListener('click', (event) => {
-            // Prevent the parent link from navigating
             event.preventDefault();
-            // Toggle the 'active' class on both dropdown and sub-menu
             mobileDropdown.classList.toggle('active');
             mobileSubMenu.classList.toggle('active');
         });
@@ -63,20 +103,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- End of Hamburger Menu Functionality ---
 
-    // ... rest of your existing DOMContentLoaded code ...
-});
 
-
-
-
-document.addEventListener('DOMContentLoaded', () => {
     // --- Existing code for Latest Listed Properties ---
     const listedPropertyContainer = document.querySelector('.listed-property-widget-container');
     const prevArrow = document.querySelector('.prev-arrow');
     const nextArrow = document.querySelector('.next-arrow');
 
     let scrollAmount = 0;
-    const propertyElement = document.querySelector('.latest-properties'); // Assuming this is present for initial calculation
+    const propertyElement = document.querySelector('.latest-properties');
     if (propertyElement) {
         const containerStyle = window.getComputedStyle(listedPropertyContainer);
         const gap = parseFloat(containerStyle.gap);
@@ -119,44 +153,51 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- End of existing code ---
 
 
-    // --- New code for Search by Location ---
-    const searchInput = document.querySelector('.hero-search-input');
-    const searchButton = document.querySelector('.hero-search-btn');
-    const searchedPropertySection = document.querySelector('.search-by-location-section');
+    // --- New code for Search by Location (with localStorage updates) ---
+    const searchForm = document.querySelector('.search-box-form');
 
+    searchForm.addEventListener('submit', (event) => {
+        event.preventDefault();
 
-    searchButton.addEventListener('click', (event) => {
-        event.preventDefault(); // Prevent the form from submitting and reloading the page
-
-        const searchTerm = searchInput.value.toLowerCase().trim(); // Get input and normalize it
-
+        const searchTerm = searchInput.value.toLowerCase().trim();
 
         if (searchTerm) {
+            const sanitizedSearchTerm = searchTerm.replace(/,/g, '');
             const filteredProperties = properties.filter(property =>
                 property.keywords.some(keyword => keyword.includes(searchTerm)) ||
                 property.location.toLowerCase().includes(searchTerm) ||
-                property.type.toLowerCase().includes(searchTerm)
+                property.type.toLowerCase().includes(searchTerm) ||
+                property.priceCents.toString().includes(sanitizedSearchTerm)
             );
-            renderSearchedProperties(filteredProperties);
 
-            // Scroll to the search results section after displaying them
+            // --- NEW: Save the search term and results to local storage ---
+            localStorage.setItem('searchTerm', searchTerm);
+            localStorage.setItem('searchResults', JSON.stringify(filteredProperties));
+
+            renderSearchedProperties(filteredProperties);
+            
+            // Show the searched properties section and hide the listed properties
+            searchedPropertySection.classList.remove('hidden-section');
+            listedPropertySection.classList.add('hidden-section');
+
             searchedPropertySection.scrollIntoView({ behavior: 'smooth', block: 'start' });
 
         } else {
-            document.querySelector('.searched-property-container').innerHTML = '';
-            document.querySelector('.searched-property-container').classList.add('display-none'); // Hide if empty
-            // Using console.log instead of alert for better user experience
-            console.log('Please enter a location or keyword to search!');
+            // If the search is empty, clear local storage and show all properties again
+            localStorage.removeItem('searchResults');
+            localStorage.removeItem('searchTerm');
+            
+            // Re-render all properties or reload the page to show the default
+            window.location.reload(); 
         }
     });
 
     // --- Add event listeners for property clicks to navigate to details page ---
-    // Delegate event handling to a parent element to catch clicks on dynamically added elements
     document.body.addEventListener('click', (event) => {
         const propertyLink = event.target.closest('.latest-properties, .searched-properties');
         if (propertyLink) {
-            event.preventDefault(); // Prevent default link behavior
-            const propertyId = propertyLink.dataset.propertyId; // Get the ID from data-property-id attribute
+            event.preventDefault(); 
+            const propertyId = propertyLink.dataset.propertyId;
             if (propertyId) {
                 window.location.href = `property-details.html?id=${propertyId}`;
             }
