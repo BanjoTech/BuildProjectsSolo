@@ -638,7 +638,8 @@ ul{
 }
 
 .service-FC{
-  color: rgb(64, 255, 47);
+  /* color: rgb(64, 255, 47); */
+  color: var(--yellow-100);
 }
 
 .service-SC{
